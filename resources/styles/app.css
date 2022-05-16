@@ -1,0 +1,141 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: Rebellion;
+  src: url('../fonts/rebellion-webfont.woff2') format('woff2'),
+  url('../fonts/rebellion-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: AnakinMono;
+  src: url('../fonts/anakinmono-webfont.woff2') format('woff2'),
+  url('../fonts/anakinmono-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: Atures500;
+  src: url('../fonts/atures-500_personal_use-webfont.woff2') format('woff2'),
+  url('../fonts/atures-500_personal_use-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: Episode1;
+  src: url('../fonts/episode1-webfont.woff2') format('woff2'),
+  url('../fonts/episode1-webfont.woff') format('woff');
+}
+
+@layer base {
+  html {
+    font-family: AnakinMono, Helvetica, Arial, sans-serif;
+    background-color: rgb(0,0,0);
+    color: white;
+  }
+  body {
+    height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #app {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  article {
+    background-color: rgba(0,0,0,.8);
+    border: 1px solid #d2d2d2;
+  }
+  .home article, .search article {
+    padding: 12px;
+  }
+  .single-post .main article {
+    padding: 20px;
+  }
+  .entry-title, .entry-content h3 {
+    font-family: Episode1, "Times New Roman", serif;
+  }
+  .single-post .entry-title, .entry-content h3 {
+    margin: 14px 0;
+  }
+  .home .entry-content .fallen_image, .search .entry-content .fallen_image {
+    border: 1px solid #d2d2d2;
+  }
+  .entry-content .fallen_image {
+    margin-top: -62px;
+    margin-left: 20px;
+  }
+  .entry-content .wp-block-image img {
+    border: 6px solid white;
+  }
+  input[type=search] {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .morai {
+    width: 37px;
+    height: 56px;
+    background-image: url("../images/morai.svg");
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -37px;
+    right: -16px;
+  }
+  footer .widget.widget_block, .read-more {
+    font-family: Atures500, Helvetica, Arial, sans-serif;
+    font-size: .75rem;
+    margin-left: initial;
+    padding-right: 0.875rem;
+    text-align: center!important;
+  }
+
+  .read-more {
+    font-size: 1rem;
+  }
+  @media only screen and (min-width: 640px) {
+
+  }
+  @media only screen and (min-width: 768px) {
+    #app {
+      background-image: url("../images/paths.png");
+      background-position: center -80px ;
+      background-repeat: no-repeat;
+      background-size: 1160px;
+    }
+    footer .widget.widget_block {
+      margin-left: auto;
+      text-align: right!important;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    #app {
+      background-position: center -110px ;
+      background-size: 1500px;
+    }
+    footer .widget.widget_block {
+      font-size: .875rem;
+      margin-left: auto;
+      text-align: right!important;
+    }
+    .main .grid {
+      min-height: calc(100vh - 275px);
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    #app {
+      background-position: center -150px ;
+      background-size: 1800px;
+    }
+    header, main, footer {
+      width: 1200px;
+      margin: auto;
+    }
+  }
+  @media only screen and (min-width: 1536px) {
+    #app {
+      background-position: center -160px ;
+      background-size: 2200px;
+    }
+  }
+}
